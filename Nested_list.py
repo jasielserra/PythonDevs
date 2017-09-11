@@ -18,15 +18,15 @@ for _ in range(int(input())):
     students.append([name,score])
         
 students.sort(key=lambda x: x[1])
-second_highest = students[0][1]
+second_lowest_grade = students[0][1]
     
 for name,grade in students:
-    if grade > second_highest:
-        second_highest = grade
+    if grade > second_lowest_grade:
+        second_lowest_grade = grade
             break
 
 names = []     
 
 for name, grade in sorted(students):
-    if grade == second_highest:
+    if grade == second_lowest_grade:
             names.append(name)
