@@ -30,3 +30,5 @@ names = []
 for name, grade in sorted(students):
     if grade == second_lowest_grade:
             names.append(name)
+
+print('\n'.join(names)) 
