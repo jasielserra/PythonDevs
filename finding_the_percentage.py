@@ -30,11 +30,10 @@ student_marks = {}
 
 for _ in range(n):
         name, *line = input().split()
-        scores = []
-        for score in line:
-            scores.append(float(score))
-        student_marks[name] = scores
-
+        for i in range(len(line)):
+            line[i] = float(line[i])
+        student_marks[name] = line
+        
 query_name = input()
 scores = student_marks.get(query_name)
 print("%.2f" %(sum(scores)/3))
