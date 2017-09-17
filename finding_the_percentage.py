@@ -29,9 +29,11 @@ n = int(input())
 student_marks = {}
 
 for _ in range(n):
-    name, *line = input().split()
-    scores = list(map(float, line))
-    student_marks[name] = scores
+        name, *line = input().split()
+        scores = []
+        for score in line:
+            scores.append(float(score))
+        student_marks[name] = scores
 
 query_name = input()
 scores = student_marks.get(query_name)
